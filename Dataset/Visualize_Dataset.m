@@ -25,13 +25,13 @@ for i=1:length(box_file.Files)
            
             if condition=="none"
                 color='yellow';
-                condition="WMI";
+                condition="IFW";
             elseif condition=="good"
                 color='green';
-                condition="WMC";
+                condition="CFW";
             elseif condition=="bad"
                 color='red';
-                condition="NWM";
+                condition="NFW";
             end
             
             IFaces = insertObjectAnnotation(I,'rectangle',[x1-(x2-x1)/10,y1-(y2-y1)/4,(x2-x1)*1.3,1.3*(y2-y1)], condition,...
@@ -39,13 +39,13 @@ for i=1:length(box_file.Files)
         else
             if condition=="none"
                 color='yellow';
-                condition="WMI";
+                condition="IFW";
             elseif condition=="good"
                 color='green';
-                condition="WMC";
+                condition="CFW";
             elseif condition=="bad"
                 color='red';
-                condition="NWM";
+                condition="NFW";
             end
 
             IFaces = insertObjectAnnotation(IFaces,'rectangle',[x1-(x2-x1)/10,y1-(y2-y1)/4,(x2-x1)*1.3,1.3*(y2-y1)], condition,...
